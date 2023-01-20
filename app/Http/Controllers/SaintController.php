@@ -54,7 +54,7 @@ class SaintController extends Controller
         $saint->save();
 
         $article = $saint->article()->firstOrNew([]);
-        $article->content = "Article sur $saint->name";
+        $article->content = "Article sur $saint->name .";
         $article->save();
     }
 
