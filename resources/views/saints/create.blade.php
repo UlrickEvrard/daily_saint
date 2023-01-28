@@ -68,15 +68,15 @@
                             <x-input-error :messages="$errors->get('resumeArticle')" class="mt-2" />
                         </div>
 
-                        <div>
+                        <!-- <div>
                             <x-input-label for="contentArticle" :value="__('Contenu de l\'article')"/>
                                 <textarea oninput="setContent(value)" id="contentArticle" class="block mt-1 w-full h-52" type="text" name="contentArticle" :value="old('contentArticle')" autofocus></textarea>
                             <x-input-error :messages="$errors->get('contentArticle')" class="mt-2" />
-                        </div>
+                        </div> -->
                         <div>
-                            <x-input-label for="test" :value="__('Contenu de l\'article')"/>
-                                <x-trix-field class="bg-white" id="test" name="test" />
-                            <x-input-error :messages="$errors->get('test')" class="mt-2" />
+                            <x-input-label for="contentArticle" :value="__('Contenu de l\'article')"/>
+                                <x-trix-field oninput="setContent(value)" class="bg-white" id="contentArticle" name="contentArticle" />
+                            <x-input-error :messages="$errors->get('contentArticle')" class="mt-2" />
                         </div>
                     </div>
                     <div class="form-group flex flex-row justify-around w-full h-max max-w-4xl mt-6 px-6 py-4 bg-indigo-100 shadow-md overflow-hidden sm:rounded-lg">
@@ -103,7 +103,9 @@
 
                             <div class="bg-zinc-800 w-full h-full rounded-lg">
                             <div class="flex flex-col items-center">
-                                    <p class="bg-zinc-800 text-white text-sm w-10/12" id="contentDisplay" ></p>
+                                    <div class="bg-zinc-800 text-white text-xs w-10/12" id="contentDisplay">
+
+                                    </div>
                                 </div>
                             </div>
 

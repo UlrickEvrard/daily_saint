@@ -6,14 +6,22 @@ use App\Models\Saint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Tonysm\RichTextLaravel\Models\Traits\HasRichText;
 
 class SaintController extends Controller
 {
+
+    use HasRichText;
+    protected $richTextFields = [
+        'content'
+    ];
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
         $saints = Saint::with('article')->get();
