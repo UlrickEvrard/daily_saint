@@ -64,7 +64,7 @@
             <x-input-error :messages="$errors->get('message')" class="mt-2" />
             <x-primary-button class="ml-4">
                     {{ __('Register') }}
-                </x-primary-button>
+            </x-primary-button>
         </form>
     </div>
 </x-app-layout>

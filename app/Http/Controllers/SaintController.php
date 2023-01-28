@@ -54,7 +54,10 @@ class SaintController extends Controller
         $saint->save();
 
         $article = $saint->article()->firstOrNew([]);
-        $article->content = "Article sur $saint->name .";
+        
+        $article->content = ($request->contentArticle == "" ? "Article sur . $saint->name" : $request->contentArticle) ;
+        $article->resumeArticle = ($request->resumeArticle == "" ? "Résumé de l'article sur . $saint->name" : $request->resumeArticle) ;
+
         $article->save();
     }
 

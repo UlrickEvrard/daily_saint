@@ -59,4 +59,22 @@
       'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
     ),
   ),
+  'tonysm/globalid-laravel' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Tonysm\\GlobalId\\GlobalIdServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'GlobalId' => 'Tonysm\\GlobalId\\GlobalIdFacade',
+    ),
+  ),
+  'tonysm/rich-text-laravel' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Tonysm\\RichTextLaravel\\RichTextLaravelServiceProvider',
+    ),
+  ),
 );

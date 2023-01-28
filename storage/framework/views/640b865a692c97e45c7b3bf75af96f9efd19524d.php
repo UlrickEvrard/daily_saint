@@ -12,6 +12,22 @@
 
         <!-- Scripts -->
         <?php echo app('Illuminate\Foundation\Vite')(['resources/css/app.css', 'resources/js/app.js']); ?>
+        <?php if (isset($component)) { $__componentOriginalf372a5a608768d7089881d6322ef2ebf2d24a416 = $component; } ?>
+<?php $component = Tonysm\RichTextLaravel\View\Components\TrixStyles::resolve([] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('rich-text-trix-styles'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Tonysm\RichTextLaravel\View\Components\TrixStyles::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes([]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalf372a5a608768d7089881d6322ef2ebf2d24a416)): ?>
+<?php $component = $__componentOriginalf372a5a608768d7089881d6322ef2ebf2d24a416; ?>
+<?php unset($__componentOriginalf372a5a608768d7089881d6322ef2ebf2d24a416); ?>
+<?php endif; ?>
+
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
